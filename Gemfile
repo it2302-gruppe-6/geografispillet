@@ -29,4 +29,6 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem 'compass'
 gem 'haml-rails'
+gem 'html5-boilerplate'
