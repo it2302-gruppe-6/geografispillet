@@ -32,3 +32,6 @@ gem 'sqlite3'
 gem 'compass'
 gem 'haml-rails'
 gem 'html5-boilerplate'
+
+gem 'nifty-generators', :group => :development
+gem 'authlogic'
