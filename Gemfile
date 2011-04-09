@@ -35,3 +35,5 @@ gem 'html5-boilerplate'
 
 gem 'nifty-generators', :group => :development
 gem 'authlogic'
+gem "bcrypt-ruby", :require => "bcrypt"
+gem "mocha", :group => :test
