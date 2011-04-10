@@ -7,3 +7,4 @@ db/schema.rb
 public/stylesheets/compiled/
 public/stylesheets/handheld.css
 public/stylesheets/style.css
+public/stylesheets/application.css
