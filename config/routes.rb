@@ -1,16 +1,12 @@
 Store::Application.routes.draw do
+  resources :authentications
+  match '/auth/:provider/callback' => 'authentications#create'
   match 'user/edit' => 'users#edit', :as => :edit_current_user
-
   match 'signup' => 'users#new', :as => :signup
-
   match 'logout' => 'user_sessions#destroy', :as => :logout
-
   match 'login' => 'user_sessions#new', :as => :login
-
   resources :user_sessions
-
   resources :users
-
   resources :products
 
   # The priority is based upon order of creation:

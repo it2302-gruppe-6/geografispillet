@@ -1,5 +1,9 @@
 - title "Log in"
 
+%p
+  =link_to "Sign in with Facebook", "/auth/twitter"
+  =link_to "Sign in with Twitter", "/auth/facebook"
+
 %p== Don't have an account? #{link_to "Sign up!", signup_path}
 
 = form_for @user_session do |f|
