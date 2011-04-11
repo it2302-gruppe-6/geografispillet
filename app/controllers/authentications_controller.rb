@@ -18,7 +18,7 @@ class AuthenticationsController < ApplicationController
             current_user.save
 
             flash[:info] = 'Authentication successful.'
-            redirect_to home_url
+            redirect_to root_url
         else
             # User is new to this application
             user = User.new
@@ -48,6 +48,6 @@ class AuthenticationsController < ApplicationController
             user_session = UserSession.new(User.find_by_single_access_token(user.single_access_token))
             user_session.save
         end
-        redirect_to home_path
+        redirect_to authentications_path
     end
 end

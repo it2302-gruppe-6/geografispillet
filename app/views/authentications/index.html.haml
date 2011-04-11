@@ -10,11 +10,12 @@
             = authentication.provider.titleize
           #uid
             = authentication.uid
-          = link_to "X", authentication, :confirm => 'Are you sure you want to remove this authentication option?', :method => :delete, :class => "remove"
+          #delete
+            = link_to "X", authentication, :confirm => 'Are you sure you want to remove this authentication option?', :method => :delete, :class => "remove"
 
       #clear
   %p Add another service to sign in with:
 - else
   %p Sign in through one of these services:
 
-= link_to "Twitter", "/auth/twitter"
+= link_to "Facebook", "/auth/facebook"
