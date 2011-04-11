@@ -3,4 +3,5 @@ class UserSession < Authlogic::Session::Base
     def persisted?
         false
     end
+    single_access_allowed_request_types = :all
 end
