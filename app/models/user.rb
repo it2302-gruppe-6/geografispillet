@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   acts_as_authentic
 
+  has_many :authentications
+
     def apply_omniauth(omniauth)
         self.email = omniauth['user_info']['email']
 
