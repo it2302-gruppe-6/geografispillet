@@ -8,8 +8,6 @@ class User < ActiveRecord::Base
         case omniauth['provider']
         when 'facebook'
             # fetch extra user info from facebook
-        when 'twitter'
-            # fetch extra user info from twitter
         end
     end
 end
