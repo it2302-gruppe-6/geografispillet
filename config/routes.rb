@@ -1,4 +1,6 @@
 Geografispillet::Application.routes.draw do
+  resources :questions
+
   resources :countries
 
   resources :authentications
