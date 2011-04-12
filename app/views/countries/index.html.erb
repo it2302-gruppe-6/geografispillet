@@ -1,0 +1,25 @@
+<% title "Countries" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Population</th>
+    <th>Area</th>
+    <th>Currency</th>
+    <th>Capital</th>
+  </tr>
+  <% for country in @countries %>
+    <tr>
+      <td><%= country.name %></td>
+      <td><%= country.population %></td>
+      <td><%= country.area %></td>
+      <td><%= country.currency %></td>
+      <td><%= country.capital %></td>
+      <td><%= link_to "Show", country %></td>
+      <td><%= link_to "Edit", edit_country_path(country) %></td>
+      <td><%= link_to "Destroy", country, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Country", new_country_path %></p>

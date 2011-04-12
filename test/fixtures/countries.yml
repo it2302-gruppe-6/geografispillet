@@ -1,0 +1,13 @@
+one:
+  name: MyString
+  population: 1
+  area: 1
+  currency: MyString
+  capital: MyString
+
+two:
+  name: MyString
+  population: 1
+  area: 1
+  currency: MyString
+  capital: MyString
