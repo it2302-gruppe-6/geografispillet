@@ -1,6 +1,6 @@
 - if current_user
-  Logged in as
-  = current_user.username
+  - geo = Geocoder.search(request.ip)
+  Logged in as #{ current_user.username } currently in #{ geo.city }, #{ geo.country }
   = link_to "Min profil", current_user
   = link_to "Logout", logout_path
 - else
