@@ -1,4 +1,6 @@
 class CountriesController < ApplicationController
+  before_filter :login_required
+
   def index
     @countries = Country.all
   end
