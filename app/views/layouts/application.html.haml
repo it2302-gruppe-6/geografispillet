@@ -17,14 +17,7 @@
     #container
 
       #user_nav
-        - if current_user
-          Logged in as
-          = current_user.username
-          = link_to "Min profil", current_user
-          = link_to "Logout", logout_path
-        - else
-          = link_to "Register", new_user_path
-          = link_to "Logg inn", login_path
+        = render :partial => 'layouts/user_nav'
 
       %header#header
         = render :partial => 'layouts/header'
