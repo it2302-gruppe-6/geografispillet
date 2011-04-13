@@ -1,44 +1,42 @@
-#main_right_column
-  - if current_user
-    %h1 Velkommen til det fantasisk spennende GEOGRAFISPILLET!
+%img#background( src="/images/bakgrunnsbilde.jpg" )
 
-    %p Spillet tar deg med på en opplevelsesrik reise gjennom Europa, men her gjelder det ikke bare å vise til sine geografikunnskaper, det er også viktig å være rask, listig og ikke minst bruke pengene dine med omhu.
+  #imagetext
 
-    %br
+    - if current_user
+      %h1 Velkommen til det fantasisk spennende GEOGRAFISPILLET!
 
-    %p Hvem i gjengen klarer å komme seg gjennom fortest?
+      %p Spillet tar deg med på en opplevelsesrik reise gjennom Europa, men her gjelder det ikke bare å vise til sine geografikunnskaper, det er også viktig å være rask, listig og ikke minst bruke pengene dine med omhu.
 
-    %br
-    %br
-    %br
-    %br
+      %br
 
-    - link_to "/avatar" do
-      %p(style="float:right;font-weight:bold;font-size:34px;") Lag avatar
+      %p Hvem i gjengen klarer å komme seg gjennom fortest?
 
-    - link_to "/countries" do
-      %p(style="float:right;font-weight:bold;font-size:34px;") Start spillet!
-  - else
+      %br
+      %br
+      %br
+      %br
 
-    %h1 GEOGRAFISPILLET
+      - link_to "/avatar" do
+        %p#biglink Lag avatar
 
-    %br
+      - link_to "/countries/1" do
+        %p#biglink Start spillet!
 
-    %p For deg som vil lære geografi på en spennende måte!
+    - else
 
-    %br
-    %br
-    %br
-    %br
-    %br
-    %br
+      %h1 GEOGRAFISPILLET
 
-    - link_to "/signup" do
-      %p(style="float:right;font-weight:bold;font-size:34px;") Register ny bruker
+      %br
 
-    - link_to "/login" do
-      %p(style="float:right;font-weight:bold;font-size:34px;") Logg inn
+      %p For deg som vil lære geografi på en spennende måte!
 
+      %br
+      %br
+      %br
+      %br
 
-#main_left_column
-  %img( src="/images/bakgrunnsbilde.jpg" width="100%" ) 
+      - link_to "/signup" do
+        %p#biglink Register ny bruker
+
+      - link_to "/login" do
+        %p#biglink Logg inn
