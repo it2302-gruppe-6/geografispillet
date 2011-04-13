@@ -1,0 +1,24 @@
+- title "Country"
+
+%p
+  %strong Name:
+  = @country.name
+%p
+  %strong Population:
+  = @country.population
+%p
+  %strong Area:
+  = @country.area
+%p
+  %strong Currency:
+  = @country.currency
+%p
+  %strong Capital:
+  = @country.capital
+
+%p
+  = link_to "Edit", edit_country_path(@country)
+  |
+  = link_to "Destroy", @country, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", countries_path

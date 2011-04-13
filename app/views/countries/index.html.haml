@@ -1,0 +1,21 @@
+- title "Countries"
+
+%table
+  %tr
+    %th Name
+    %th Population
+    %th Area
+    %th Currency
+    %th Capital
+  - for country in @countries
+    %tr
+      %td= country.name
+      %td= country.population
+      %td= country.area
+      %td= country.currency
+      %td= country.capital
+      %td= link_to 'Show', country
+      %td= link_to 'Edit', edit_country_path(country)
+      %td= link_to 'Destroy', country, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Country", new_country_path

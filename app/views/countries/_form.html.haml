@@ -1,0 +1,24 @@
+= form_for @country do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :population
+    %br
+    = f.text_field :population
+  %p
+    = f.label :area
+    %br
+    = f.text_field :area
+  %p
+    = f.label :currency
+    %br
+    = f.text_field :currency
+  %p
+    = f.label :capital
+    %br
+    = f.text_field :capital
+  %p
+    = f.submit
