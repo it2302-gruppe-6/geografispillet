@@ -1,2 +1,5 @@
 %h1
 = link_to 'Geografispillet', root_url
+
+- if current_user
+  #balance Saldo: #{current_user.balance} NOK

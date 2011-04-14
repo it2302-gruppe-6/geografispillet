@@ -1,17 +1,20 @@
-- title "Trips"
+- title "Etapper"
 
 %table
   %tr
-    %th Counts
-    %th User 1
-    %th User 2
+    %th Etapper|
+    %th Konkurrent|
+    %th Konkurrent
   - for trip in @trips
     %tr
       %td= trip.counts
+    %tr
       %td= trip.user_1
+    %tr
       %td= trip.user_2
+    %tr
       %td= link_to 'Show', trip
       %td= link_to 'Edit', edit_trip_path(trip)
       %td= link_to 'Destroy', trip, :confirm => 'Are you sure?', :method => :delete
 
-%p= link_to "New Trip", new_trip_path
+%p= link_to "Ny etappe", new_trip_path

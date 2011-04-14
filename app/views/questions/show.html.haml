@@ -22,3 +22,7 @@
       %li= link_to "Paris", "/questions/2"
       %li= link_to "Berlin", "/questions/1"
       %li= link_to "Oslo", "/questions/1"
+
+- if request.env['HTTP_REFERER'].match(/\/questions\/1/)
+  - current_user.balance += 100
+  - current_user.save
