@@ -1,6 +1,4 @@
 Geografispillet::Application.routes.draw do
-  resources :setups
-
   resources :authentications
   match '/auth/:provider/callback' => 'authentications#create'
   match 'user/edit' => 'users#edit', :as => :edit_current_user
@@ -9,9 +7,12 @@ Geografispillet::Application.routes.draw do
   match 'login' => 'user_sessions#new', :as => :login
   resources :user_sessions
   resources :users
+
+  resources :trips
+  resources :setups
   resources :products
-  resources :questions
   resources :countries
+  resources :questions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

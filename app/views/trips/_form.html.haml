@@ -1,0 +1,16 @@
+= form_for @trip do |f|
+  = f.error_messages
+  %p
+    = f.label :counts
+    %br
+    = f.text_field :counts
+  %p
+    = f.label :user_1
+    %br
+    = f.text_field :user_1
+  %p
+    = f.label :user_2
+    %br
+    = f.text_field :user_2
+  %p
+    = f.submit

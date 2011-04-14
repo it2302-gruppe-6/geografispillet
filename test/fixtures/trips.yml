@@ -1,0 +1,9 @@
+one:
+  counts: 1
+  user_1: MyString
+  user_2: MyString
+
+two:
+  counts: 1
+  user_1: MyString
+  user_2: MyString

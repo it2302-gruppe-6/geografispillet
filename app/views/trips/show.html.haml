@@ -1,0 +1,18 @@
+- title "Trip"
+
+%p
+  %strong Counts:
+  = @trip.counts
+%p
+  %strong User 1:
+  = @trip.user_1
+%p
+  %strong User 2:
+  = @trip.user_2
+
+%p
+  = link_to "Edit", edit_trip_path(@trip)
+  |
+  = link_to "Destroy", @trip, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", trips_path
