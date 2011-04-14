@@ -1,0 +1,24 @@
+#main_left_column
+  %img#country( src="/images/nokkelskjerm2_uten_landnavn.jpg" ) 
+
+#main_right_column
+  %p
+    %strong Question:
+    = @question.question
+  -#%p
+  -#  %strong Answer:
+  -#  = @question.answer
+
+  - if $show_edit
+    %p
+      = link_to "Edit", edit_question_path(@question)
+      |
+      = link_to "Destroy", @question, :confirm => 'Are you sure?', :method => :delete
+      |
+      = link_to "View All", questions_path
+
+  %table
+    %ul
+      %li= link_to "Paris", "/questions/2"
+      %li= link_to "Berlin", "/questions/1"
+      %li= link_to "Oslo", "/questions/1"

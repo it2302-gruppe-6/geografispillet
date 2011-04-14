@@ -1,24 +1,35 @@
-- title "Country"
+#main_left_column
+  - case @country.name
+  - when "Frankrike"
+    %img#country( src="/images/nokkelskjerm2_uten_landnavn.jpg" ) 
+  - when "Norge"
+    %img#country( src="/images/countries/norge.jpg" )
 
-%p
-  %strong Name:
-  = @country.name
-%p
-  %strong Population:
-  = @country.population
-%p
-  %strong Area:
-  = @country.area
-%p
-  %strong Currency:
-  = @country.currency
-%p
-  %strong Capital:
-  = @country.capital
+#main_right_column
+  %p
+    %strong Name:
+    = @country.name
+  %p
+    %strong Population:
+    = @country.population
+  %p
+    %strong Area:
+    = @country.area
+  %p
+    %strong Currency:
+    = @country.currency
+  %p
+    %strong Capital:
+    = @country.capital
 
-%p
-  = link_to "Edit", edit_country_path(@country)
-  |
-  = link_to "Destroy", @country, :confirm => 'Are you sure?', :method => :delete
-  |
-  = link_to "View All", countries_path
+  - if $show_edit
+    %p
+      = link_to "Edit", edit_country_path(@country)
+      |
+      = link_to "Destroy", @country, :confirm => 'Are you sure?', :method => :delete
+      |
+      = link_to "View All", countries_path
+
+  %br
+  %p
+    = link_to "Tjen penger - svar på spørsmål!", "/questions/1"

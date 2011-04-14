@@ -1,0 +1,13 @@
+%table
+  %tr
+    %th Question
+    %th Answer
+  - for question in @questions
+    %tr
+      %td= question.question
+      %td= question.answer
+      %td= link_to 'Show', question
+      %td= link_to 'Edit', edit_question_path(question)
+      %td= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Question", new_question_path
