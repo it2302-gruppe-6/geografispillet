@@ -1,11 +1,6 @@
 class CreateProducts < ActiveRecord::Migration
   def self.up
-    create_table :products do |t|
-      t.string :name
-      t.float :price
-
-      t.timestamps
-    end
+      drop_table :products
   end
 
   def self.down

@@ -10,7 +10,6 @@ Geografispillet::Application.routes.draw do
 
   resources :trips
   resources :setups
-  resources :products
   resources :countries
   resources :questions
 
