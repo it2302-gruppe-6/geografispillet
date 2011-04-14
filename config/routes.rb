@@ -1,4 +1,6 @@
 Geografispillet::Application.routes.draw do
+  resources :setups
+
   resources :authentications
   match '/auth/:provider/callback' => 'authentications#create'
   match 'user/edit' => 'users#edit', :as => :edit_current_user

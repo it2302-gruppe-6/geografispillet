@@ -1,0 +1,13 @@
+- title "Setups"
+
+%table
+  %tr
+    %th Name
+  - for setup in @setups
+    %tr
+      %td= setup.name
+      %td= link_to 'Show', setup
+      %td= link_to 'Edit', edit_setup_path(setup)
+      %td= link_to 'Destroy', setup, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Setup", new_setup_path

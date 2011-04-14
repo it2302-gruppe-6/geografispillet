@@ -1,0 +1,12 @@
+- title "Setup"
+
+%p
+  %strong Name:
+  = @setup.name
+
+%p
+  = link_to "Edit", edit_setup_path(@setup)
+  |
+  = link_to "Destroy", @setup, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", setups_path
