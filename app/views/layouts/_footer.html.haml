@@ -1,7 +1,8 @@
-%p Eline: Hvor mange penger har du, Anja?
-%p Anja: 320 kroner, enn du?
-%p Eline: 430,-
+- if current_user
+  %p Eline: Hvor mange penger har du, Anja?
+  %p Anja: 320 kroner, enn du?
+  %p Eline: 430,-
 
-%form{ :action => request.referer, :method => "post" }
-  %input{:type=>"text",:name=>"text"}
-  %input{:type=>"submit",:value=>"Send"}
+  %form{ :action => request.referer, :method => "post" }
+    %input{:type=>"text",:name=>"text"}
+    %input{:type=>"submit",:value=>"Send"}
