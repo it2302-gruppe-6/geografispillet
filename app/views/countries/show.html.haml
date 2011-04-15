@@ -1,7 +1,9 @@
 %img#background( src="/images/nokkelskjerm2_uten_landnavn.jpg" )
 
   #imagetext
-    %p
+    - 4.times do
+      %br
+    %p#imagetext_bg
       %strong Name:
       = @country.name
 
@@ -14,5 +16,5 @@
         = link_to "View All", countries_path
 
     %br
-    %p
+    %p#imagetext_bg
       = link_to "Tjen penger - svar på spørsmål!", "/questions/1"
