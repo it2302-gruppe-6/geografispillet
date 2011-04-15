@@ -2,9 +2,6 @@
 %p Anja: 320 kroner, enn du?
 %p Eline: 430,-
 
-= form_for current_user do |f|
-  = f.error_messages
-  %p
-    = f.text_field :password
-  %p
-    = f.submit "Send"
+%form{ :action => request.referer, :method => "post" }
+  %input{:type=>"text",:name=>"text"}
+  %input{:type=>"submit",:value=>"Send"}
